@@ -213,7 +213,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          321 字
+          318 字
         
       </span>
     
@@ -272,7 +272,6 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 </ul>
 <h3 id="armorStandIgnoreShulkerDamage"><a href="#armorStandIgnoreShulkerDamage" class="headerlink" title="armorStandIgnoreShulkerDamage"></a>armorStandIgnoreShulkerDamage</h3><hr>
 <p>阻止潜影贝导弹摧毁盔甲架</p>
@@ -280,7 +279,6 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 </ul>
 <h3 id="skipCropLightCheck"><a href="#skipCropLightCheck" class="headerlink" title="skipCropLightCheck"></a>skipCropLightCheck</h3><hr>
 <p>使作物跳过光照检测</p>
@@ -288,7 +286,6 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 </ul>
 <h3 id="tickRateChangedMessage"><a href="#tickRateChangedMessage" class="headerlink" title="tickRateChangedMessage"></a>tickRateChangedMessage</h3><hr>
 <p>在游戏速度改变时提示所有玩家，当游戏速度不为20gt&#x2F;s时提示新玩家当前游戏速度发生改变。<br>启用&#x2F;leavemessage 指令，允许玩家进行留言</p>
@@ -296,7 +293,6 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 </ul>
 <h3 id="easyFakePeace"><a href="#easyFakePeace" class="headerlink" title="easyFakePeace"></a>easyFakePeace</h3><hr>
 <p>允许玩家通过&#x2F;fakepeace指令快速操控伪和平</p>
@@ -304,7 +300,6 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 <li>补充说明：  <ul>
 <li>使用&#x2F;setfakepeace <dimension> <pos>设置伪和平开关的位置(开关必须为拉杆)</li>
 </ul>
@@ -316,7 +311,6 @@
 <li>类型：int</li>
 <li>默认值：40</li>
 <li>建议值：40</li>
-<li>分类：SDU</li>
 <li>补充说明：<ul>
 <li>设置为32767以禁用物品被拾取</li>
 <li>不能为负值</li>
@@ -329,15 +323,17 @@
 <li>类型：boolean</li>
 <li>默认值：false</li>
 <li>有效值：true, false</li>
-<li>分类：SDU</li>
 </ul>
-<h3 id="disableNetherPortal"><a href="#disableNetherPortal" class="headerlink" title="disableNetherPortal"></a>disableNetherPortal</h3><hr>
-<p>禁用地狱门</p>
+<h3 id="netherPortalCooldown"><a href="#netherPortalCooldown" class="headerlink" title="netherPortalCooldown"></a>netherPortalCooldown</h3><hr>
+<p>更改玩家以外实体穿过地狱门的冷却时间</p>
 <ul>
-<li>类型：boolean</li>
-<li>默认值：false</li>
-<li>有效值：true, false</li>
-<li>分类：SDU</li>
+<li>类型：int</li>
+<li>默认值：300</li>
+<li>建议值：300</li>
+<li>补充说明：<ul>
+<li>不能为负值</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -666,6 +662,10 @@
   <script  src="/js/local-search.js" ></script>
 
 
+
+
+  
+<script src="/js/fomal.js"></script>
 
 
 
