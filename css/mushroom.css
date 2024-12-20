@@ -1,6 +1,6 @@
 
 body::-webkit-scrollbar {
-    width: 0;
+    width: 4px;
 }
 
 .neko {
