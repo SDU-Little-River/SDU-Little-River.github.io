@@ -91,7 +91,7 @@ function createtime() {
   var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
       snum = Math.round(seconds);
   1 == String(snum).length && (snum = "0" + snum);
-  let currentTimeHtml = `<div style="font-size:13px;font-weight:bold">本站运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`;
+  let currentTimeHtml = `<div style="font-size:14px;font-weight:bold">本站运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i></div>`;
   // 将时间显示在页面上
   document.getElementById("workboard") &&
   (document.getElementById("workboard").innerHTML = currentTimeHtml);
