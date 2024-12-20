@@ -50,15 +50,6 @@ div#archive {
     background: var(--trans-dark);
 }
 
-
-/* 夜间模式页脚页头遮罩透明 */
-[data-theme="dark"] #footer::before {
-    background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
-    background: transparent !important;
-}
-
 /* 阅读模式 */
 .read-mode #aside-content .card-widget {
     background: rgba(158, 204, 171, 0.5) !important;
@@ -78,10 +69,28 @@ div#archive {
 }
 
 /* 页脚与头图透明 */
-#footer {
+/*#footer {*/
+/*    background: transparent !important;*/
+/*}*/
+#page-header {
     background: transparent !important;
 }
-#page-header {
+/* 亚克力效果 */
+#footer {
+    background: rgba(0, 0, 0, 0.3) !important; /* 黑色半透明背景（加深透明度） */
+    backdrop-filter: blur(3px) !important; /* 模糊背景 */
+}
+
+
+/* 夜间模式页脚页头遮罩透明 */
+[data-theme="dark"] #footer::before {
+    background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+    background: transparent !important;
+}
+
+[data-theme="dark"] #footer {
     background: transparent !important;
 }
 
@@ -93,13 +102,15 @@ div#archive {
     background: transparent !important;
 }
 
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-    background: transparent !important;
-}
+
+
+/* 夜间模式页头遮罩亚克力效果 */
 [data-theme="dark"] #page-header::before {
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.1) !important; /* 黑色半透明背景（加深透明度） */
+    backdrop-filter: blur(3px); /* 模糊背景 */
+    content: ''; /* 确保伪元素有内容 */
 }
+
 
 /* 侧边栏个人信息卡片动态渐变色 */
 #aside-content > .card-widget.card-info {
@@ -357,4 +368,21 @@ div#archive {
         background-position: 100% 100%; /* 控制流动方向 */
     }
 }
+
+/* 一级菜单居中 */
+#nav .menus_items {
+    position: absolute !important;
+    width: fit-content !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+    display: flex !important;
+}
+/* 这里的2是代表导航栏的第2个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -125px;
+}
+
 
