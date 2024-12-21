@@ -112,10 +112,11 @@ function switchNightMode() {
   typeof FB === 'object' && window.loadFBComment()
   window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(() => window.disqusReset(), 200)
 }
+
 /* 夜间模式切换动画 end */
 
+// 右侧阅读进度start
 
-/*返回顶部按钮start*/
 window.onscroll = percent;// 执行函数
 // 页面百分比
 function percent() {
@@ -134,4 +135,4 @@ function percent() {
   }
 }
 
-// 返回顶部按钮 end
+// 右侧阅读进度end
