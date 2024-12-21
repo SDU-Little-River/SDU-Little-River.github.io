@@ -31,6 +31,9 @@ div#archive {
     border-radius: 20px;
 }
 
+div#post, .body-wrap{
+    --backdrop-filter: blur(5px) !important;
+}
 /* 导航栏 */
 #page-header.nav-fixed #nav {
     background: rgba(255, 255, 255, 0.75);
@@ -385,4 +388,119 @@ div#archive {
     left: -125px;
 }
 
+/* 标题增强 */
+#site-name::before {
+    opacity: 0;
+    background-color: var(--theme-color) !important;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    position: absolute;
+    top: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    height: 100%;
+    content: "\f015";
+    box-shadow: 0 0 5px var(--theme-color);
+    font-family: "Font Awesome 6 Free";
+    text-align: center;
+    color: white;
+    line-height: 34px; /*如果有溢出或者垂直不居中的现象微调一下这个参数*/
+    font-size: 18px; /*根据个人喜好*/
+}
+#site-name:hover::before {
+    opacity: 1;
+    scale: 1.03;
+}
+#site-name {
+    position: relative;
+    font-size: 24px; /*一定要把字体调大点，否则效果惨不忍睹！*/
+}
 
+/*顶部波浪线*/
+/* 波浪css */
+.main-hero-waves-area {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+    z-index: 5;
+}
+.waves-area .waves-svg {
+    width: 100%;
+    height: 5rem;
+}
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+    fill: rgba(246, 123, 123, 0.1);
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+    fill: rgba(244, 175, 255, 0.1);
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+    fill: rgba(255, 67, 189, 0.1);
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+    fill: rgba(253, 190, 255, 0.1);
+}
+/* 波浪黑夜模式隐藏 */
+[data-theme="dark"] .main-hero-waves-area {
+    display: none;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves-area .waves-svg {
+        height: 40px;
+        min-height: 40px;
+    }
+}
+/*顶部波浪线 end*/
+
+/* 返回顶部 */
+
+button#go-up #percent {
+    display: none;
+    font-weight: bold;
+    font-size: 15px !important;
+}
+
+button#go-up span {
+    font-size: 12px!important;
+    margin-right: -1px;
+}
+
+/* 鼠标滑动到按钮上时显示返回顶部图标 */
+button#go-up:hover i {
+    display: block !important;
+}
+
+button#go-up:hover #percent {
+    display: none !important;
+}
