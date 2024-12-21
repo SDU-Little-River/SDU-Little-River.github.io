@@ -3915,6 +3915,8 @@ figure.highlight pre .javascript .function {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
+  background: rgba(255,203,255,0.3); /* 可调整背景颜色 */
+  backdrop-filter: blur(5px); /* 亚克力模糊效果 */
 }
 #loading-box .loading-img {
   width: 100px;
