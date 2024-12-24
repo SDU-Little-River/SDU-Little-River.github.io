@@ -1,5 +1,5 @@
 :root {
-    --trans-light: rgba(255, 255, 255, 0.8);
+    --trans-light: rgba(255, 255, 255, 0.9);
     --trans-dark: rgba(25, 25, 25, 0.8);
     --border-style: 1px solid rgb(169, 169, 169);
     --backdrop-filter: blur(5px) saturate(150%);
@@ -31,11 +31,11 @@ div#archive {
     border-radius: 20px;
 }
 
-/* 导航栏 */
-#page-header.nav-fixed #nav {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: var(--backdrop-filter);
-}
+/*!* 导航栏 *!*/
+/*#page-header.nav-fixed #nav {*/
+/*    background: rgba(255, 255, 255, 0.75);*/
+/*    backdrop-filter: var(--backdrop-filter);*/
+/*}*/
 
 [data-theme="dark"] #page-header.nav-fixed #nav {
     background: rgba(0, 0, 0, 0.7) !important;
@@ -76,11 +76,29 @@ div#archive {
     background: transparent !important;
 }
 /* 亚克力效果 */
-#footer {
-    background: rgba(0, 0, 0, 0.3) !important; /* 黑色半透明背景（加深透明度） */
+[data-theme="light"] #footer {
+    background: rgba(237, 197, 255, 0.2) !important; /* 黑色半透明背景（加深透明度） */
     backdrop-filter: blur(3px) !important; /* 模糊背景 */
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.28), 1px -1px 0 rgba(0, 0, 0, 0.28), -1px 1px 0 rgba(0, 0, 0, 0.28), 1px 1px 0 rgba(0, 0, 0, 0.28); /* 添加描边 */
 }
 
+#site-title {
+    font-size: 60px !important; /* 设置字体大小 */
+    color: #edc5ff !important; /* 设置文字颜色 */
+    /*text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff !important; !* 添加描边 *!*/
+}
+
+#post-info{
+    text-align: center!important;
+}
+
+#article-container{
+    font-size: 17px;
+}
+
+#footer{
+    font-size: 14px!important;
+}
 
 /* 夜间模式页脚页头遮罩透明 */
 [data-theme="dark"] #footer::before {
@@ -95,21 +113,21 @@ div#archive {
 }
 
 /* 白天模式遮罩透明 */
-#footer::before {
-    background: transparent !important;
-}
 #page-header::before {
     background: transparent !important;
 }
 
-
-
-/* 夜间模式页头遮罩亚克力效果 */
-[data-theme="dark"] #page-header::before {
-    background: rgba(0, 0, 0, 0.1) !important; /* 黑色半透明背景（加深透明度） */
-    backdrop-filter: blur(3px); /* 模糊背景 */
-    content: ''; /* 确保伪元素有内容 */
+/* 日间模式页头遮罩亚克力效果 */
+[data-theme="light"] #page-header::before {
+    background: rgba(237, 197, 255,0.1) !important; /* 黑色半透明背景（加深透明度） */
+    backdrop-filter: blur(1px); /* 模糊背景 */
 }
+
+/*!* 夜间模式页头遮罩亚克力效果 *!*/
+/*[data-theme="dark"] #page-header::before {*/
+/*    background: rgba(0, 0, 0, 0.1) !important; !* 黑色半透明背景（加深透明度） *!*/
+/*    backdrop-filter: blur(3px); !* 模糊背景 *!*/
+/*}*/
 
 
 /* 侧边栏个人信息卡片动态渐变色 */
