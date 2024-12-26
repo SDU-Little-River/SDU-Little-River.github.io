@@ -477,6 +477,11 @@ div#archive {
     animation-duration: 20s;
     fill: rgba(253, 190, 255, 0.1);
 }
+
+[data-theme="dark"] #canvas_sakura {
+    display: none;
+}
+
 /* 波浪黑夜模式隐藏 */
 [data-theme="dark"] .main-hero-waves-area {
     display: none;
