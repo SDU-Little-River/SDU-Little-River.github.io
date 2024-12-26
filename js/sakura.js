@@ -61,6 +61,7 @@ if(document.documentElement.getAttribute('data-theme') === 'light') {
         return this.list.length;
     }
 
+    // 修改 fnx，加入水平随机速度
     function getRandom(option) {
         var ret, random;
         switch (option) {
@@ -77,26 +78,30 @@ if(document.documentElement.getAttribute('data-theme') === 'light') {
                 ret = Math.random() * 6;
                 break;
             case 'fnx':
-                random = -0.5 + Math.random() * 1;
+                // 随机一个方向：-1 左方向，1 右方向
+                var direction = Math.random() > 0.5 ? 1 : -1; // 随机决定向左还是向右
+                random = 0.2 + Math.random() * 0.5; // 水平速度的大小
                 ret = function (x, y) {
-                    return x + 0.5 * random - 1.7;
+                    return x + direction * random; // 根据随机方向改变水平方向
                 };
                 break;
             case 'fny':
-                random = 1.5 + Math.random() * 0.7
+                random = 1.5 + Math.random() * 0.7; // 垂直速度
                 ret = function (x, y) {
-                    return y + random;
+                    return y + random; // 让花瓣向下飘动
                 };
                 break;
             case 'fnr':
+                var rotation = Math.random() > 0.5 ? 1 : -1; // 随机决定旋转方向
                 random = Math.random() * 0.03;
                 ret = function (r) {
-                    return r + random;
+                    return r + rotation*random;
                 };
                 break;
         }
         return ret;
     }
+
 
     function startSakura() {
         requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
