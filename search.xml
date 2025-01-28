@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Ubuntu 24.04.1 LTS grub美化案例</title>
+      <link href="/2024/11/01/grub%E7%BE%8E%E5%8C%96%E6%A1%88%E4%BE%8B/"/>
+      <url>/2024/11/01/grub%E7%BE%8E%E5%8C%96%E6%A1%88%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="unbutu美化案例"><a href="#unbutu美化案例" class="headerlink" title="unbutu美化案例"></a>unbutu美化案例</h1><p>最近给电脑安上了unbutu系统,作为一个爱折腾的人,美化必须给安排上.<br>在<a href="https://www.gnome-look.org/browse?cat=109&amp;ord=rating">gnome-look</a>中试用了很多主题,都没有满意的,最终决定在<a href="https://github.com/vinceliuice/grub2-themes"><em>whitesur</em></a>这个主题的基础上稍作修改.</p><h2 id="主题下载与安装"><a href="#主题下载与安装" class="headerlink" title="主题下载与安装"></a>主题下载与安装</h2><hr><p>在gnome-look上下载好主题并解压到/usr/share/grub/themes/<br><code>sudo cp /your/path/yourtheme /usr/share/grub/themes/yourtheme -rf</code><br>修改系统配置<br><code>sudo vim /etc/default/grub</code><br>找到GRUB_THEME并将其改为<br><code>GRUB_THEME=&quot;/usr/share/grub/themes/yourtheme/theme.txt&quot;</code><br>更新引导配置<br><code>sudo update-grub</code><br>安装完成后的结果<br><img src="https://www.xhbsh.top/img/unbutu/grub/img.jpg" alt=""></p><h2 id="更换主题的背景"><a href="#更换主题的背景" class="headerlink" title="更换主题的背景"></a>更换主题的背景</h2><hr><p>替换主题文件夹中的<code>background.png</code><br><img src="https://www.xhbsh.top/img/unbutu/grub/background.jpg" alt=""></p><h2 id="更改主题配置"><a href="#更改主题配置" class="headerlink" title="更改主题配置"></a>更改主题配置</h2><hr><p>打开主题的配置文件<code>theme.txt</code><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">+ boot_menu &#123;</span><br><span class="line">    left = 48%</span><br><span class="line">    top = 30%</span><br><span class="line">    width = 40%</span><br><span class="line">    height = 40%</span><br><span class="line">    item_font = &quot;DejaVu Sans Regular 32&quot;</span><br><span class="line">    item_color = &quot;#ffffff&quot;</span><br><span class="line">    selected_item_color = &quot;#ff85b7&quot;</span><br><span class="line">    icon_width = 72</span><br><span class="line">    icon_height = 72</span><br><span class="line">    item_icon_space = 24</span><br><span class="line">    item_height = 72</span><br><span class="line">    item_padding = 8</span><br><span class="line">    item_spacing = 48</span><br><span class="line">    selected_item_pixmap_style = &quot;select_*.png&quot;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><br>根据<a href="https://forum.suse.org.cn/t/grub2-theme/1510">Grub2 theme 制作教程</a>中的图示更改了boot menu的位置和字体大小<br><img src="https://www.xhbsh.top/img/unbutu/grub/Grub2-guide-bootmenu-vertical-scheme.jpg" alt=""><br>将boot界面向右移动,同时由于我用的2.5k分辨率,相应的增大了字体大小,最终结果如下<br><img src="https://www.xhbsh.top/img/unbutu/grub/final.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> unbutu美化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>珍珠炮配置指南</title>
+      <link href="/2024/08/01/%E7%8F%8D%E7%8F%A0%E7%82%AE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"/>
+      <url>/2024/08/01/%E7%8F%8D%E7%8F%A0%E7%82%AE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="真猪炮配置指南"><a href="#真猪炮配置指南" class="headerlink" title="真猪炮配置指南"></a>真猪炮配置指南</h1><p>在该指南中，将简单的介绍配置珍珠炮需要的前置知识、配置的详细步骤、需要注意的问题，方便大家学习自己需要的操作，或解决遇到的问题。<br>指南分为五部分：</p><ol><li>珍珠炮计算器及前置组件的下载</li><li>获取珍珠的发射坐标</li><li>珍珠炮的计算器的使用</li><li>将配置导入到珍珠炮中</li><li>珍珠拦截</li></ol><h2 id="珍珠炮计算器及前置组件的下载"><a href="#珍珠炮计算器及前置组件的下载" class="headerlink" title="珍珠炮计算器及前置组件的下载"></a>珍珠炮计算器及前置组件的下载</h2><p>直接点击对应版本的链接下载安装即可(仅支持win)<br><a class="btn" href="https://dotnet.microsoft.com/zh-cn/download/dotnet/thank-you/runtime-6.0.28-windows-x64-installer" title="点击下载珍珠炮计算器前置组件">前置组件</a><br><a class="btn" href="https://github.com/LegendsOfSky/PearlCalculatorCore/releases/download/CPv1.41421356/PearlCalculatorCP-v1.41421356-release-win-x64.zip" title="点击下载珍珠炮计算器">珍珠炮计算器</a></p><h2 id="获取珍珠的发射坐标"><a href="#获取珍珠的发射坐标" class="headerlink" title="获取珍珠的发射坐标"></a>获取珍珠的发射坐标</h2><p>珍珠的发射位置在四格岩浆的中间，创造模式下飞过去获取大致坐标然后取整即可<br><img src="https://www.xhbsh.top/img/pearlcannon/image1.png" alt=""></p><h2 id="珍珠炮的计算器的使用"><a href="#珍珠炮的计算器的使用" class="headerlink" title="珍珠炮的计算器的使用"></a>珍珠炮的计算器的使用</h2><p>依次完成下列操作后即可得到当量及方向数据</p><ul><li>打开珍珠炮计算器后，在右上角可以将语言切换到中文</li><li>点击“导入设置”将珍珠炮配置文件导入</li><li>输入上一步中获取的珍珠发射坐标（珍珠的y坐标在“更多基础选项”中修改）</li><li>输入目标点坐标点击计算tnt当量<br><img src="https://www.xhbsh.top/img/pearlcannon/image2.png" alt=""><br>在右侧选中配置后点击珍珠模拟来获取珍珠每gt的坐标<br><img src="https://www.xhbsh.top/img/pearlcannon/image4.png" alt=""></li></ul><h2 id="将配置导入到珍珠炮中"><a href="#将配置导入到珍珠炮中" class="headerlink" title="将配置导入到珍珠炮中"></a>将配置导入到珍珠炮中</h2><p>在rom中的和后方面板中的信息是镜像关系，如图所示，很好理解其中每一整列铁轨（包括侦测器）对应一个配置<br><img src="https://www.xhbsh.top/img/pearlcannon/image5.png" alt=""><br><img src="https://www.xhbsh.top/img/pearlcannon/image3.png" alt=""><br>每个珍珠炮的配置方式可能略有不同，但大致方法都一样—凑数.这里以配置红色阵列114tnt，蓝色阵列514tnt,西方向为例<br>对于这门炮来说，每个配置由一个24位的二进制数来表示.其中前2位表示方向，第3-13位表示红色阵列的当量，第14-24位表示蓝色阵列的当量<br><img src="https://www.xhbsh.top/img/pearlcannon/image6.png" alt=""><br>方向是西，所以前两位是11，红色阵列部分，114=80+20+10+4\<br>所以红色阵列部分为00010110100\<br>同理得蓝色阵列为  10000010100<br>然后侦测器代表1，玻璃代表0<br>配置结果如下<br><img src="https://www.xhbsh.top/img/pearlcannon/image7.png" alt="配置完成后的珍珠炮"><br>再进行其他配置时只需接这上一个配置继续往外延伸即可<br><img src="https://www.xhbsh.top/img/pearlcannon/image8.png" alt=""><br>配置完成后切记在珍珠炮面板中标识！！<br><img src="https://www.xhbsh.top/img/pearlcannon/image9.png" alt=""></p><h2 id="珍珠拦截"><a href="#珍珠拦截" class="headerlink" title="珍珠拦截"></a>珍珠拦截</h2><p>在“珍珠模拟”中可以获取到珍珠每gt的坐标<br><img src="https://www.xhbsh.top/img/pearlcannon/image10.png" alt=""><br>在所需坐标处进行拦截<br><img src="https://www.xhbsh.top/img/pearlcannon/image11.png" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生电 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>投影使用指南</title>
+      <link href="/2024/04/05/%E6%8A%95%E5%BD%B1%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+      <url>/2024/04/05/%E6%8A%95%E5%BD%B1%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="投影简要使用教程"><a href="#投影简要使用教程" class="headerlink" title="投影简要使用教程"></a>投影简要使用教程</h1><h2 id="投影模组简要介绍"><a href="#投影模组简要介绍" class="headerlink" title="投影模组简要介绍"></a>投影模组简要介绍</h2><p>默认情况下,投影主菜单的快捷键位是M,打开后即可进入投影的主菜单<br><img src="https://www.xhbsh.top/img/mod/litematica/img.png" alt=""><br>在配置菜单中可以更改快捷键及开关投影的各种功能<br>在主手或副手中持有投影工具时,左下角会显示投影菜单栏<br><img src="https://www.xhbsh.top/img/mod/litematica/img_1.png" alt=""><br>使用 ctrl+滑动滚轮即可切换模式.</p><h3 id="1-区域选择"><a href="#1-区域选择" class="headerlink" title="1.区域选择"></a>1.区域选择</h3><p>区域选择共有两种模式,可以在主菜单中切换,推荐新手使用简单模式,并且在区域编辑器中将角点模式设置为角点</p><h4 id="简单模式"><a href="#简单模式" class="headerlink" title="简单模式"></a>简单模式</h4><p>在简单模式下,仅有一个选区,使用左键和右键分别确定两个投影原点即可将投影的选区确认<br>使用鼠标中间点击角点(选区其他位置)可以选中角点(选区),选中后按住<code>alt</code>滚动鼠标滚轮可以移动角点(选区)<br><img src="https://www.xhbsh.top/img/mod/litematica/img_2.png" alt=""><br>在选区编辑器中可以更改选区的名称或这保存原理图<br><img src="https://www.xhbsh.top/img/mod/litematica/img4.png" alt=""></p><h4 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h4><p>对于大型的机器,如果使用简单模式进行保存,会导致建造时的种种不便,使用普通模式可以很好的解决这一问题<br>在普通模式下,选区并不会被自动创建,需要玩家手动创建选区,步骤如下</p><ul><li><code>投影主菜单-选区目录-新选择</code>输入选区名称后即可新建选区<br><img src="https://www.xhbsh.top/img/mod/litematica/img_4.png" alt=""></li><li>如果需要新建子选区,在 <code>投影主菜单-区域编辑器</code> 中选择新建子区域,也可以在 配置菜单-热键 中修改<code>添加选区</code>的快捷键以方便快捷添加一个选区<br>使用鼠标中键可以选中子选区角点(子选区)<br>最终结果如图<img src="https://www.xhbsh.top/img/mod/litematica/img_5.png" alt=""><br>保存原理图的步骤和简单模式一样<h3 id="2-原理图放置-amp-5-原理图粘贴"><a href="#2-原理图放置-amp-5-原理图粘贴" class="headerlink" title="2.原理图放置&amp;5.原理图粘贴"></a>2.原理图放置&amp;5.原理图粘贴</h3></li><li>导入外部的原理图(没有则跳过)<br>建议开启投影设置中的自定义原理图目录,这样可以在所有版本共用一个保存原理图的地址<br><img src="https://www.xhbsh.top/img/mod/litematica/img_6.png" alt=""><br>然后将网上下载到的投影看那个放入这个文件夹即可</li><li>在游戏中加载原理图<br><code>投影主菜单-加载原理图</code>选中所需的原理图后在左下角点击加载原理图即可</li><li>调整原理图的位置,旋转原理图<br>使用鼠标中键选中原理图,alt+鼠标滚轮移动位置<br><code>投影主菜单-配置原理图</code>选中所需的原理图,点击配置按钮进入配置界面<br><img src="https://www.xhbsh.top/img/mod/litematica/img_8.png" alt=""><br>在配置界面右侧可以调整投影原点的位置,旋转/镜像原理图<br>注意!除非作者说明,否则不建议在建造机器的时旋转/镜像,这极有可能造成机器无法正常运行</li><li><p>粘贴原理图(仅创造)</p><h2 id="在服务器中使用共享投影来共同完成工程的流程"><a href="#在服务器中使用共享投影来共同完成工程的流程" class="headerlink" title="在服务器中使用共享投影来共同完成工程的流程"></a>在服务器中使用共享投影来共同完成工程的流程</h2><h2 id="其他一些常用的功能"><a href="#其他一些常用的功能" class="headerlink" title="其他一些常用的功能"></a>其他一些常用的功能</h2></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生电 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
