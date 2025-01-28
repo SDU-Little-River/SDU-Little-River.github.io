@@ -23,6 +23,19 @@
     
     
     <entry>
+      <title>sdu跨年烟花食用教程</title>
+      <link href="/2024/11/01/SDU-carpetion-addition/sdu%E8%B7%A8%E5%B9%B4%E7%83%9F%E8%8A%B1%E9%A3%9F%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+      <url>/2024/11/01/SDU-carpetion-addition/sdu%E8%B7%A8%E5%B9%B4%E7%83%9F%E8%8A%B1%E9%A3%9F%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="模组安装"><a href="#模组安装" class="headerlink" title="模组安装"></a>模组安装</h2><p>由于本次烟花的粒子上限超过了原版客户端限制，必须安装mod来更改粒子上限，安装方法如下</p><ol><li>在群文件中下载sducarpet模组<br><img src="https://www.xhbsh.top/img/sdu/img1.jpg" alt=""></li><li>将sducarpet放入游戏目录中的mod文件夹后正常启动游戏即可<br><img src="https://www.xhbsh.top/img/sdu/img2.jpg" alt=""></li></ol><h2 id="观看注意事项"><a href="#观看注意事项" class="headerlink" title="观看注意事项"></a>观看注意事项</h2><p>由于原版的限制，在距离烟花超过128格后将不会渲染，所以需要采用某些特殊方式在服务端进行观看</p><p>具体流程：</p><h3 id="如果熟练使用tweakeroo"><a href="#如果熟练使用tweakeroo" class="headerlink" title="如果熟练使用tweakeroo"></a>如果熟练使用tweakeroo</h3><p>等待管理将您tp到指定位置后，开启灵魂出窍后移动至（18,76,-190）以如下视角观看<br><img src="https://www.xhbsh.top/img/sdu/img3.jpg" alt=""></p><h3 id="不会使用灵魂出窍功能"><a href="#不会使用灵魂出窍功能" class="headerlink" title="不会使用灵魂出窍功能"></a>不会使用灵魂出窍功能</h3><p>下载sducraft官网中的SDUcraft-3RDclient整合包，在游戏中使用键盘按键<code>.</code>启用灵魂出窍，开启后视角可以离开玩家本体进行移动<br><img src="https://www.xhbsh.top/img/sdu/img4.jpg" alt=""><br>开启灵魂出窍后移动至（18,76,-190）以如下视角观看</p><h2 id="！！！！！！！！！！！"><a href="#！！！！！！！！！！！" class="headerlink" title="！！！！！！！！！！！"></a>！！！！！！！！！！！</h2><ul><li>检查类似于禁用全部粒子之类的选项是否关闭，在设置中打开全部粒子<img src="https://www.xhbsh.top/img/sdu/img5.jpg" alt=""></li><li>视距&gt;= 10</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>珍珠炮配置指南</title>
       <link href="/2024/08/01/%E7%8F%8D%E7%8F%A0%E7%82%AE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/"/>
       <url>/2024/08/01/%E7%8F%8D%E7%8F%A0%E7%82%AE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</url>
